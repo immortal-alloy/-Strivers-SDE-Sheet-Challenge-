@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& a) {
+        int n=a.size();
+       int mini=a[0];
+       int p=0;
+       for(int i=1;i<n;i++){
+           p=max(p,a[i]-mini);
+           mini=min(mini,a[i]);
+       }
+       return p;
+    }
+};
